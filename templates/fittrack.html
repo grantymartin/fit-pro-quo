@@ -1,0 +1,53 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2 class="white-text">Fitness Tracker</h2>
+{% for action in action_tracker %}
+<div class="card">
+  <div class="card-image activator waves-effect waves-block waves-light">
+    <i class="material-icons">fitness_center</i>
+    <i class="material-icons">directions_bike</i>
+    <i class="material-icons">directions_run</i>
+  </div>
+  <div class="card-content activator">
+    <span class="card-title activator grey-text text-darken-4"><strong>Session name: {{action.session_name}}</strong><i class="material-icons right">more_vert</i></span>
+    <span class="card-title activator grey-text text-darken-4">Date: {{action.date}}</span>
+    <a href="{{url_for('addreview', action_id=action._id)}}"class="waves-effect waves-light btn"><i class="material-icons right">cloud</i>Add Review/Edit</a>
+  </div>
+  <div class="card-reveal">
+    <span class="card-title grey-text text-darken-4"><strong>Session name: {{action.session_name}}</strong><i class="material-icons right">close</i></span>
+    <table class="stripped">
+      <tbody>
+        <tr>
+          <td>Sport:</td>
+          <td>{{action.action_name}}</td>
+        </tr>
+        <tr>
+          <td>Session dercription: </td>
+          <td>{{action.action_description}}</td>
+        </tr>
+        <tr>
+          <td>Planned fatigue levels:</td>
+          <td>{{action.planned_fatigue}}</td>
+        </tr>
+        <tr>
+          <td>Date:</td>
+          <td>{{action.date}}</td>
+        </tr>
+      </tbody>
+    </table>
+    <span class="card-title grey-text text-darken-4"><strong>Results</strong></span>
+    <table class="stripped">
+      <tbody>
+        <tr>
+          <td>Level of fatigue: </td>
+          <td>{{action.feedback}}</td>
+        </tr>
+        <tr>
+          <td>Session dercription: </td>
+          <td>{{action.actual_fatigue}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endfor %} {% endblock %}

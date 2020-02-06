@@ -1,0 +1,16 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2 class="white-text">Sports</h2>
+<ul class="collapsible">
+    {% for act in action %}
+    <li>
+        <div class="collapsible-header">
+            <i class="material-icons">arrow_drop_down_circle</i> {{act.action_name}}
+        </div>
+        <div class="collapsible-body">
+            <p class="white-text">You have ......... activities under the ............ name </p>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

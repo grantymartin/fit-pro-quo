@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.bg-img {
+    background-image: url("../images/background-img.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.header {
+    font-family: 'Bebas Neue', cursive;
+}
+
+.para {
+    font-family: 'Libre Baskerville', serif;
+}

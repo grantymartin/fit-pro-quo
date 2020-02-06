@@ -1,0 +1,47 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2 class="white-text"><span class="header">Fit-Pro-Quo</span> Home</h2>
+
+<div class="col s12 m7">
+    <div class="card horizontal blue lighten-3">
+        <h3 class="header">Welcome to your<br> Fit-Pro-Quo</h3>
+        <div class="card-stacked">
+            <div class="card-content">
+                <p class="para">Here we aim to assist you in becoming a better version of yourself. We help by providing you with a platform where you can create a plan to build on what you already have. Here you can plan, monitor and review your fitness progress.</p>
+            </div>
+            <div class="card-action">
+                <a href="{{url_for('fit_track')}}" class="waves-effect waves-light btn deep-purple darken-3"><span class="white-text">Tracker</span></a>
+                <a href="{{url_for('addexercise')}}" class="waves-effect waves-light btn deep-purple darken-3"><span class="white-text">Planning</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col s12 m7">
+    <div class="card horizontal blue ">
+        <h3 class="header">Plan, act, review</h3>
+        <div class="card-stacked">
+            <div class="card-content">
+                <p class="para">Start building your own training plan here with us now. Don't procrastinate! Studies have shown you are 50% more likely to act on so something if you write it down first. Build the plan, follow the plan and reek the rewards</p>
+            </div>
+            <div class="card-action">
+                <a href="{{url_for('addexercise')}}" class="waves-effect waves-light btn deep-purple darken-3"><span class="white-text">Create a Plan</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="col s12 m7">
+    <div class="card horizontal blue darken-3 ">
+        <h3 class="header">Sport Specific</h3>
+        <div class="card-stacked">
+            <div class="card-content">
+                <p class="para">Training isn't just training here at Fit-Pro-Quo. We categories or sports and athletes before building our plan. If your sport isn't already in one of our many categories you can now create a new category. Separate your training by sport and work specifically to develop towards your targets!</p>
+            </div>
+            <div class="card-action">
+                <a href="{{url_for('sports')}}" class="waves-effect waves-light btn deep-purple darken-3"><span class="white-text">Sports</span></a>
+                <a href="#" class="waves-effect waves-light btn deep-purple darken-3"><span class="white-text">New</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

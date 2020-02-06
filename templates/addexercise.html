@@ -1,0 +1,109 @@
+{% extends 'base.html' %} {% block content %}
+
+<h3 class="white-text">
+    Add Exercise
+</h3>
+<div class="row">
+    <form class="col s12" action="{{url_for('insert_exercise') }}" method="POST" class="row">
+        <div class="card blue">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <div>
+                            <i class="material-icons prefix black circle center">directions_run</i>
+                            <label class="black-text card-title center-align"><strong>Sport</strong></label>
+                        </div>
+                        <select id="action" name="action_name">
+                            <option value="" disabled selected> Choose your Sport</option>
+                            {% for act in action %}
+                            <option value="{{act.action_name}}" class="black-text">{{act.action_name}}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card blue">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <div>
+                            <i class="material-icons prefix black circle center">add</i>
+                            <label class="black-text card-title center-align"><strong>Session name</strong></label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="session_name" name="session_name" type="tel" class="materialize-textarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card blue">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <div>
+                            <i class="material-icons prefix black circle center">assignment</i>
+                            <label class="black-text card-title center-align"><strong>Session Plan</strong></label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="action_description" name="action_description" type="tel" class="materialize-textarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card blue">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <div>
+                            <i class="material-icons prefix black circle center">exposure</i>
+                            <label class="black-text card-title center-align"><strong>Planned fatigue levels</strong></label>
+                        </div>
+                        <div class="input-field col s12">
+                            <select id="planned_fatigue" name="planned_fatigue">
+                            <option value="" disabled selected> Level of fatigue</option>
+                            <option value="1" class="black-text">1</option>
+                            <option value="2" class="black-text">2</option>
+                            <option value="3" class="black-text">3</option>
+                            <option value="4" class="black-text">4</option>
+                            <option value="5" class="black-text">5</option>
+                            <option value="6" class="black-text">6</option>
+                            <option value="7" class="black-text">7</option>
+                            <option value="8" class="black-text">8</option>
+                            <option value="9" class="black-text">9</option>
+                            <option value="10" class="black-text">10</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card blue">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="input-field col s12" id="matfix">
+                        <div>
+                            <i class="material-icons prefix black circle center">today</i>
+                            <label class="black-text card-title center-align"><strong>Date</strong></label>
+                        </div>
+                        <input id="date" name="date" type="text" class="datepicker">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <button class="btn waves-effect waves-light deep-purple darken-3" type="submit">Add session
+            <i class="material-icons right">play_list</i>
+        </button>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% endblock %}
