@@ -4,7 +4,7 @@
     Add Review/ Edit
 </h3>
 <div class="row">
-    <form class="col s12" action="{{url_for('update_review', action_id=action.id) }}" method="POST" class="row">
+    <form class="col s12 row" action="{{url_for('update_review', action_id=action._id) }}" method="POST">
         <div class="card blue darken-3">
             <div class="card-content white-text">
                 <div class="row">
@@ -158,7 +158,6 @@
                 </div>
             </div>
         </div>
-
 
         <button class="btn waves-effect waves-light deep-purple darken-3" type="submit">Edit/ update session
             <i class="material-icons right">play_list</i>
