@@ -30,7 +30,6 @@ def insert_exercise():
     action_tracker.insert_one(request.form.to_dict())
     return redirect(url_for('fit_track'))
     
-    
 @app.route('/addreview/<action_id>')
 def addreview(action_id):
     the_action = mongo.db.action_tracker.find_one({"_id":ObjectId(action_id)})
@@ -50,16 +49,11 @@ def update_review(action_id):
         'actual_fatigue':request.form.get('actual_fatigue'),
         'feedback':request.form.get('feedback')
     })
-    return redirect(url_for('fit_tracker'))
-
-
-
+    return redirect(url_for('fit_track'))
 
 @app.route('/sports')
 def sports():
     return render_template("sports.html", action=mongo.db.action.find())
-    
-
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

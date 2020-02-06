@@ -4,7 +4,7 @@
     Add Review/ Edit
 </h3>
 <div class="row">
-    <form class="col s12" action="{{url_for('addreview', action_id=action.id) }}" method="POST" class="row">
+    <form class="col s12" action="{{url_for('update_review', action_id=action.id) }}" method="POST" class="row">
         <div class="card blue darken-3">
             <div class="card-content white-text">
                 <div class="row">
@@ -27,17 +27,17 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="card blue darken-3">
             <div class="card-content white-text">
                 <div class="row">
                     <div class="input-field col s12">
                         <div>
                             <i class="material-icons prefix black circle center">add</i>
-                            <label class="black-text card-title center-align"><strong>Session name{{action.session_name}}</strong></label>
+                            <label class="black-text card-title center-align"><strong>Session name</strong></label>
                         </div>
                         <div class="input-field col s12">
-                            <textarea id="session_name" name="session_name" type="tel" class="materialize-textarea"></textarea>
+                            <textarea id="session_name" name="session_name" type="tel" class="materialize-textarea">{{action_tracker.session_name}}</textarea>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
                             <label class="black-text card-title center-align"><strong>Session Plan</strong></label>
                         </div>
                         <div class="input-field col s12">
-                            <textarea id="action_description" name="action_description" type="tel" class="materialize-textarea"></textarea>
+                            <textarea id="action_description" name="action_description" type="tel" class="materialize-textarea">{{action_tracker.action_description}}</textarea>
                         </div>
                     </div>
                 </div>
@@ -70,8 +70,9 @@
                         </div>
                         <div class="input-field col s12">
                             <select id="planned_fatigue" name="planned_fatigue">
-                            <option value="" disabled selected> Level of fatigue</option>
-                            <option value="1" class="black-text">1</option>
+                                {% if action_tracker.planned_fatigue == action_tracker.planned_fatigue %}
+                                    <option value="{{action_tracker.planned_fatigue}}" class="black-text" selected>{{action_tracker.planned_fatigue}}</option>
+                                    <option value="1" class="black-text">1</option>
                             <option value="2" class="black-text">2</option>
                             <option value="3" class="black-text">3</option>
                             <option value="4" class="black-text">4</option>
@@ -81,6 +82,18 @@
                             <option value="8" class="black-text">8</option>
                             <option value="9" class="black-text">9</option>
                             <option value="10" class="black-text">10</option>
+                                    {% else %}
+                                    <option value="1" class="black-text">1</option>
+                            <option value="2" class="black-text">2</option>
+                            <option value="3" class="black-text">3</option>
+                            <option value="4" class="black-text">4</option>
+                            <option value="5" class="black-text">5</option>
+                            <option value="6" class="black-text">6</option>
+                            <option value="7" class="black-text">7</option>
+                            <option value="8" class="black-text">8</option>
+                            <option value="9" class="black-text">9</option>
+                            <option value="10" class="black-text">10</option>
+                                {% endif %}
                         </select>
                         </div>
                     </div>
@@ -96,7 +109,7 @@
                             <i class="material-icons prefix black circle center">today</i>
                             <label class="black-text card-title center-align"><strong>Date</strong></label>
                         </div>
-                        <input id="date" name="date" type="text" class="datepicker">
+                        <input id="date" name="date" type="text" class="datepicker" value="{{action_tracker.date}}">
                     </div>
                 </div>
             </div>
@@ -112,7 +125,7 @@
                         </div>
                         <div class="input-field col s12">
                             <select id="actual_fatigue" name="actual_fatigue">
-                            <option value="" disabled selected> Level of fatigue</option>
+                            <option value="" disabled selected> Actual Level of fatigue</option>
                             <option value="1" class="black-text">1</option>
                             <option value="2" class="black-text">2</option>
                             <option value="3" class="black-text">3</option>
@@ -147,7 +160,7 @@
         </div>
 
 
-        <button class="btn waves-effect waves-light deep-purple darken-3" type="submit">Add session
+        <button class="btn waves-effect waves-light deep-purple darken-3" type="submit">Edit/ update session
             <i class="material-icons right">play_list</i>
         </button>
     </form>
