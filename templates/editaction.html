@@ -4,7 +4,7 @@
     Add Review/ Edit
 </h3>
 <div class="row">
-    <form class="col s12 row" action="{{url_for('update_review', action_id=action._id) }}" method="POST">
+    <form class="col s12 row" action="{{url_for('update_action', action_id=action._id) }}" method="POST">
         <div class="card blue darken-3">
             <div class="card-content white-text">
                 <div class="row">
@@ -114,53 +114,8 @@
                 </div>
             </div>
         </div>
-
-        <div class="card blue">
-            <div class="card-content white-text">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <div>
-                            <i class="material-icons prefix black circle center">exposure</i>
-                            <label class="black-text card-title center-align"><strong>Actual fatigue levels</strong></label>
-                        </div>
-                        <div class="input-field col s12">
-                            <select id="actual_fatigue" name="actual_fatigue">
-                            <option value="" disabled selected> Actual Level of fatigue</option>
-                            <option value="1" class="black-text">1</option>
-                            <option value="2" class="black-text">2</option>
-                            <option value="3" class="black-text">3</option>
-                            <option value="4" class="black-text">4</option>
-                            <option value="5" class="black-text">5</option>
-                            <option value="6" class="black-text">6</option>
-                            <option value="7" class="black-text">7</option>
-                            <option value="8" class="black-text">8</option>
-                            <option value="9" class="black-text">9</option>
-                            <option value="10" class="black-text">10</option>
-                        </select>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="card blue">
-            <div class="card-content white-text">
-                <div class="row">
-                    <div class="input-field col s12">
-                        <div>
-                            <i class="material-icons prefix black circle center">assignment</i>
-                            <label class="black-text card-title center-align"><strong>Feedback</strong></label>
-                        </div>
-                        <div class="input-field col s12">
-                            <textarea id="feedback" name="feedback" type="tel" class="materialize-textarea"></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <button class="btn waves-effect waves-light deep-purple darken-3" type="submit">Edit/ update session
-            <i class="material-icons right">play_list</i>
+        <button class="btn waves-effect waves-light deep-purple darken-3" type="submit" name="action">Update session
+            <i class="material-icons right">create</i>
         </button>
     </form>
 </div>

@@ -30,14 +30,14 @@ def insert_exercise():
     action_tracker.insert_one(request.form.to_dict())
     return redirect(url_for('fit_track'))
     
-@app.route('/addreview/<action_id>')
-def addreview(action_id):
+@app.route('/edit_action/<action_id>')
+def edit_action(action_id):
     the_action = mongo.db.action_tracker.find_one({"_id":ObjectId(action_id)})
     sport = mongo.db.action.find()
-    return render_template('addreview.html', action_tracker=the_action, action=sport)
+    return render_template('editaction.html', action_tracker=the_action, action=sport)
     
-@app.route('/update_review/<action_id>', methods=["POST"])
-def update_review(action_id):
+@app.route('/update_action/<action_id>', methods=["POST"])
+def update_action(action_id):
     action_tracker = mongo.db.action_tracker
     action_tracker.update( {'_id': ObjectId(action_id)},
     {
@@ -46,8 +46,6 @@ def update_review(action_id):
         'action_description': request.form.get('action_description'),
         'planned_fatigue': request.form.get('planned_fatigue'),
         'date':request.form.get('date'),
-        'actual_fatigue':request.form.get('actual_fatigue'),
-        'feedback':request.form.get('feedback')
     })
     return redirect(url_for('fit_track'))
 
