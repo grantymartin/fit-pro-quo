@@ -1,0 +1,31 @@
+{% extends 'base.html' %} {% block content %}
+
+<h3 class="white-text">
+    Add Exercise
+</h3>
+<div class="row">
+    <form class="col s12" action="{{url_for('insert_exercise') }}" method="POST" class="row">
+        <div class="card blue">
+            <div class="card-content white-text">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <div>
+                            <i class="material-icons prefix black circle center">assignment</i>
+                            <label class="black-text card-title center-align"><strong>Sport</strong></label>
+                        </div>
+                        <div class="input-field col s12">
+                            <textarea id="action_name" name="action_name" type="tel" class="materialize-textarea"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn waves-effect waves-light deep-purple darken-3" type="submit">Add Sport
+            <i class="material-icons right">play_list</i>
+        </button>
+    </form>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+{% endblock %}

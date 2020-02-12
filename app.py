@@ -50,15 +50,26 @@ def update_action(action_id):
         'feedback': request.form.get('feedback')
     })
     return redirect(url_for('fit_track'))
-
-@app.route('/sports')
-def sports():
-    return render_template("sports.html", action=mongo.db.action.find())
     
 @app.route('/delete_action/<action_id>')
 def delete_action(action_id):
     mongo.db.action_tracker.remove({'_id': ObjectId(action_id)})
     return redirect(url_for('fit_track'))
+
+@app.route('/sports')
+def sports():
+    return render_template("sports.html", action=mongo.db.action.find())
+    
+@app.route('/addsport')
+def addsport():
+    return render_template('addsport.html', action=mongo.db.action.find())
+
+@app.route('/insert_sport', methods=['POST'])
+def insert_sport():
+    action = mongo.db.action
+    action_doc = {'action_name': request.form.get['action_name']}
+    action.insert_one(action_doc)
+    return redirect(url_for('sports'))
     
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
