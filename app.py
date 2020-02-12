@@ -46,13 +46,20 @@ def update_action(action_id):
         'action_description': request.form.get('action_description'),
         'planned_fatigue': request.form.get('planned_fatigue'),
         'date':request.form.get('date'),
+        'actual_fatigue': request.form.get('actual_fatigue'),
+        'feedback': request.form.get('feedback')
     })
     return redirect(url_for('fit_track'))
 
 @app.route('/sports')
 def sports():
     return render_template("sports.html", action=mongo.db.action.find())
-
+    
+@app.route('/delete_action/<action_id>')
+def delete_action(action_id):
+    mongo.db.action_tracker.remove({'_id': ObjectId(action_id)})
+    return redirect(url_for('fit_track'))
+    
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
