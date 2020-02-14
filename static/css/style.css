@@ -23,3 +23,7 @@ main {
 .para {
     font-family: 'Libre Baskerville', serif;
 }
+
+.btn-margin {
+    margin: 20px;
+}

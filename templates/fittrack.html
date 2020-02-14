@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 
 <h2 class="white-text">Fitness Tracker</h2>
-<a href="{{url_for('addexercise')}}" class="waves-effect waves-light btn blue"><i class="material-icons right">add</i>Add Session</a>
+<a href="{{url_for('addexercise')}}" class="waves-effect waves-light btn btn-margin blue"><i class="material-icons right">add</i>Add Session</a> 
 {% for action in action_tracker %}
 <div class="card">
   <div class="card-image activator waves-effect waves-block waves-light">
@@ -13,7 +13,7 @@
     <span class="card-title activator grey-text text-darken-4"><strong>Session name: {{action.session_name}}</strong><i class="material-icons right">more_vert</i></span>
     <span class="card-title activator grey-text text-darken-4">Date: {{action.date}}</span>
     <a href="{{url_for('edit_action', action_id=action._id)}}" class="waves-effect waves-light btn deep-purple darken-3"><i class="material-icons right">create</i>Edit/Add Feedback</a>
-    <a class="waves-effect waves-light btn modal-trigger red" href="#{{action._id}}">Delete</a>
+    <a href="#{{action._id}}" class="waves-effect waves-light btn modal-trigger red">Delete</a>
     <div id="{{action._id}}" class="modal">
       <div class="modal-content">
         <h4>Confirmation</h4>
@@ -61,18 +61,7 @@
       </tbody>
     </table>
     <a href="{{url_for('edit_action', action_id=action._id)}}" class="waves-effect waves-light btn deep-purple darken-3"><i class="material-icons right">create</i>Edit/Add Feedback</a>
-    <a class="waves-effect waves-light btn modal-trigger red" href="#modal1">Delete</a>
-    <div id="{{action._id}}" class="modal">
-      <div class="modal-content">
-        <h4>Confirmation</h4>
-        <p>Once you have deleted a session it is not possible to retrieve the session information again.</p>
-      </div>
-      <div class="modal-footer">
-        <a href="{{url_for('delete_action', action_id=action._id)}}" class="modal-close waves-effect waves-green btn-flat">Confirm</a>
-      </div>
-    </div>
   </div>
 </div>
 {% endfor %}
-<a href="{{url_for('addexercise')}}" class="waves-effect waves-light btn blue"><i class="material-icons right">add</i>Add Session</a>
-{% endblock %}
+<a href="{{url_for('addexercise')}}" class="waves-effect waves-light btn btn-margin blue"><i class="material-icons right">add</i>Add Session</a> {% endblock %}

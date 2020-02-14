@@ -66,9 +66,13 @@ def addsport():
 
 @app.route('/insert_sport', methods=['POST'])
 def insert_sport():
-    action = mongo.db.action
-    action_doc = {'action_name': request.form.get['action_name']}
-    action.insert_one(action_doc)
+    action_doc = {'action_name': request.form.get('action_name')}
+    mongo.db.action.insert_one(action_doc)
+    return redirect(url_for('sports'))
+    
+@app.route('/delete_sport/<action_name_id>')
+def delete_sport(action_name_id):
+    mongo.db.action.remove({'_id':ObjectId(action_name_id)})
     return redirect(url_for('sports'))
     
 if __name__ == '__main__':

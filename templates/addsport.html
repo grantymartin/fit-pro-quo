@@ -1,10 +1,10 @@
 {% extends 'base.html' %} {% block content %}
 
 <h3 class="white-text">
-    Add Exercise
+    Add Sport
 </h3>
 <div class="row">
-    <form class="col s12" action="{{url_for('insert_exercise') }}" method="POST" class="row">
+    <form class="col s12" action="{{url_for('insert_sport') }}" method="POST" class="row">
         <div class="card blue">
             <div class="card-content white-text">
                 <div class="row">
@@ -14,7 +14,7 @@
                             <label class="black-text card-title center-align"><strong>Sport</strong></label>
                         </div>
                         <div class="input-field col s12">
-                            <textarea id="action_name" name="action_name" type="tel" class="materialize-textarea"></textarea>
+                            <input id="action_name" name="action_name" type="text" class="materialize-textarea">
                         </div>
                     </div>
                 </div>
