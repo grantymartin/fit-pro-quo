@@ -6,14 +6,14 @@
     <li>
         <div class="collapsible-header">
             <i class="material-icons">arrow_drop_down_circle</i> {{act.action_name}}
-            <a href="#{{action_name._id}}" class="waves-effect waves-light btn modal-trigger red">Delete</a>
-            <div id="{{action_name._id}}" class="modal">
+            <a href="#{{act._id}}" class="waves-effect waves-light btn modal-trigger red delete-btn">Delete</a>
+            <div id="{{act._id}}" class="modal">
                 <div class="modal-content">
                     <h4>Delete Sport/h4>
-                    <p>Once you have deleted a ssport it is not possible to retrieve the sport again but can be recreated.</p>
+                        <p>Once you have deleted a ssport it is not possible to retrieve the sport again but can be recreated.</p>
                 </div>
                 <div class="modal-footer">
-                    <a href="{{url_for('delete_sport', action_name_id=action_name._id)}}" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+                    <a href="{{url_for('delete_sport', act_id=act._id)}}" class="modal-close waves-effect waves-green btn-flat">Agree</a>
                 </div>
             </div>
         </div>
@@ -23,5 +23,4 @@
     </li>
     {% endfor %}
 </ul>
-<a href="{{url_for('addsport')}}" class="waves-effect waves-light btn btn-margin deep-purple darken-3"><i class="material-icons right">add</i>Add Sport</a> 
-{% endblock %}
+<a href="{{url_for('addsport')}}" class="waves-effect waves-light btn btn-margin deep-purple darken-3 hoverable"><i class="material-icons right">add</i>Add Sport</a> {% endblock %}

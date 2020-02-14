@@ -27,3 +27,7 @@ main {
 .btn-margin {
     margin: 20px;
 }
+
+.delete-btn {
+    margin-left: 3vw;
+}

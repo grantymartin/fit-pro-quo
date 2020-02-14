@@ -70,9 +70,9 @@ def insert_sport():
     mongo.db.action.insert_one(action_doc)
     return redirect(url_for('sports'))
     
-@app.route('/delete_sport/<action_name_id>')
-def delete_sport(action_name_id):
-    mongo.db.action.remove({'_id':ObjectId(action_name_id)})
+@app.route('/delete_sport/<act_id>')
+def delete_sport(act_id):
+    mongo.db.action.remove({'_id':ObjectId(act_id)})
     return redirect(url_for('sports'))
     
 if __name__ == '__main__':
