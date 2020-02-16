@@ -61,6 +61,7 @@ def delete_action(action_id):
 def sports():
     action=mongo.db.action.find()
     action_trackers=mongo.db.action_tracker.find()
+    #action_tracker_count=action_trackers.count()((action_tracker=action_tracker_count))
     return render_template("sports.html", actions=action, action_tracker=action_trackers )
     
 @app.route('/addsport')
