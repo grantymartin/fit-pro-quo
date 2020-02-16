@@ -34,8 +34,23 @@ I would also like to have a completed feature added so that you can filter down 
 
 ## Technologies Used 
 
+Google Chrome developer tools (https://www.google.com/chrome/)- I used these to test my site on different device sizes and to receive information from javascript in the console.\
+
+Google fronts (https://fonts.google.com/)- Google fonts allowed me to change my text throughout the site to give it a more appropriate style and look for the user.\
+
+Materialize (https://materializecss.com/)- Materialize was used throughout this site for its grid system and different layout features. It has allowed me to change sizes and add features to my site which has helped give it a more professional look and easier for the user to understand.\
+
+JQuery (https://jquery.com/)- JQuery has made it easier to target specific aspects of the site in javascript by simplifying the DOM.\
+
+W3C validator (https://validator.w3.org/)- The W3C validator allowed to check my code is clean and had no faults.\
 
 
 
 
-https://pxhere.com/en/photo/1376234
+## Credits
+### Content
+All content on this site was written by myself.
+### media
+The background image for this site came from https://pxhere.com/en/photo/1376234 which was labelled for reuse. 
+### Acknowledgements
+I received inspiration for this project while attempting to plan out my own training plan and create a specific training regime
