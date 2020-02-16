@@ -18,7 +18,8 @@ def home():
 
 @app.route('/fit_track')
 def fit_track():
-    return render_template("fittrack.html", action_tracker=mongo.db.action_tracker.find())
+    action_trackers=mongo.db.action_tracker.find().sort("date", -1)
+    return render_template("fittrack.html", action_tracker= action_trackers )
     
 @app.route('/addexercise')
 def addexercise():
@@ -58,7 +59,9 @@ def delete_action(action_id):
 
 @app.route('/sports')
 def sports():
-    return render_template("sports.html", action=mongo.db.action.find())
+    action=mongo.db.action.find()
+    action_trackers=mongo.db.action_tracker.find()
+    return render_template("sports.html", actions=action, action_tracker=action_trackers )
     
 @app.route('/addsport')
 def addsport():

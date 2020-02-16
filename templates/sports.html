@@ -10,7 +10,7 @@
             <div id="{{act._id}}" class="modal">
                 <div class="modal-content">
                     <h4>Delete Sport/h4>
-                        <p>Once you have deleted a ssport it is not possible to retrieve the sport again but can be recreated.</p>
+                        <p>Once you have deleted a sport it is not possible to retrieve the sport again but can be recreated.</p>
                 </div>
                 <div class="modal-footer">
                     <a href="{{url_for('delete_sport', act_id=act._id)}}" class="modal-close waves-effect waves-green btn-flat">Agree</a>
@@ -18,7 +18,14 @@
             </div>
         </div>
         <div class="collapsible-body">
-            <p class="white-text">You have ......... activities under the ............ name </p>
+            <p class="white-text">
+                You have {% if action_tracker.action_name == {{act.action_name}} %}
+                {% action_tracker.count("{{act.action_name}}") %} 
+                {% else %} 
+                no 
+                {% endif %} 
+                activities under {{act.action_name}} name
+            </p>
         </div>
     </li>
     {% endfor %}
