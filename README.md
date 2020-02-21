@@ -44,20 +44,39 @@ JQuery (https://jquery.com/)- JQuery has made it easier to target specific aspec
 
 W3C validator (https://validator.w3.org/)- The W3C validator allowed to check my code is clean and had no faults.\
 
+MongoDB (https://www.mongodb.com)- MongoDB is a database that I'm using to store all the information gained from the site.\
+
+Flask (https://www.fullstackpython.com/flask.html)- Flask is a framework that has help make the code easier to write and display.\
+
+Heroku(https://www.heroku.com)- Heroku allows me to create a link with the site running with a working application.\
+
+## Testing
+
+For testing to begin with all the HTML and CSS code was run through direct input into the W3C Validator and any errors or coding problems were fixed. 
+
+Code was tested for adding to to database first by fillinging the form and then simply reading to the console. There are no requirments in many of the form options because they are not always needed in every option. 
+
+The link was then sent to 5 people to test on diffrent devices from an apple imac to a samsung galaxy phone and visually the site appeared well across the board. 
+
+Then I asked them to find diffrent areas of the site to test how easy it was to navigate. For example I asked one person to find the add sports page or asked another person to find the fit tracker page. Every time I asked anyone to find somewhere on the site they were easily able to find the correct page which shows the site was easy to navigate.
+
+Next I asked them to use the site for it's functionality by having them add a sport and then delete it from the database. Followed by having them add a new session, edit it after already submitting it and then finally deleting it. All were able to easy follow my instructions and the site worked as supposed to. 
+
+Next I asked them to do thier best to break the site in anyway they could. They pointed out to me that when adding or editing sessions you could leave spaces blank and still submit but I felt that to give anyone using this site to create a better plan for themselves, it was better to be able to leave gaps because it might be something they don't know at the time and can come back to.
+
+## Deployment
+
+Throughout development the application and code was written in AWS cloud 9 and run locally for testing.
+
+This site has been pushed to github pages and then conected to heroku to run the app. While uploading and linking to Heroku, my tutor Aaron Sinnott help me make sure everything was in place to run the code and make sure it works. We set the config var IP to 0.0.0.0 and the PORT to 5000.
+
 
 
 
 ## Credits
 ### Content
-All content on this site was written by myself.
+All hard coded content on this site was written by myself.
 ### media
 The background image for this site came from https://pxhere.com/en/photo/1376234 which was labelled for reuse. 
 ### Acknowledgements
 I received inspiration for this project while attempting to plan out my own training plan and create a specific training regime
-
-
-
-
-https://en.wikipedia.org/wiki/Cycling
-https://en.wikipedia.org/wiki/Swimming_(sport)
-https://en.wikipedia.org/wiki/Running
