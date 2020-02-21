@@ -54,3 +54,10 @@ All content on this site was written by myself.
 The background image for this site came from https://pxhere.com/en/photo/1376234 which was labelled for reuse. 
 ### Acknowledgements
 I received inspiration for this project while attempting to plan out my own training plan and create a specific training regime
+
+
+
+
+https://en.wikipedia.org/wiki/Cycling
+https://en.wikipedia.org/wiki/Swimming_(sport)
+https://en.wikipedia.org/wiki/Running

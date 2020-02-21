@@ -19,12 +19,7 @@
         </div>
         <div class="collapsible-body">
             <p class="white-text">
-                You have {% if action_tracker.action_name == act.action_name %}
-                {{ action_tracker }} 
-                {% else %} 
-                no 
-                {% endif %} 
-                activities under the {{act.action_name}} category
+                {{act.sport_description}}
             </p>
         </div>
     </li>
