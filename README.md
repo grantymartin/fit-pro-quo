@@ -8,7 +8,7 @@ When the user first opens the home page, they are clearly presented with differe
 
 The Fit Tracker page is where all planned and completed sessions are displayed for the user to see. Each session is shown in date order for ease of use and once clicked on is expanded to show more detail. The specific details of each session are laid out in a table format which is easy for the user to process and understand. Once completed the user can use the Feedback button to add extra information or if the training session had changed in anyway then they can edit what was already there. There is also the option to delete each session if the user decides that it is no longer needed in the fit Tracker.
 
-On the Sports page, all the different sport categories are displayed in a similar format to the Fit Tracker page however simply just more compact. The extra detail under every sport helps the user to understand how many activities they have under each different sport category. Again, the user has the ability to add and delete different sport categories when needed.
+On the Sports page, all the different sport categories are displayed in a similar format to the Fit Tracker page however simply just more compact. The extra detail under every sport describes what each individual sport is. Again, the user has the ability to add and delete different sport categories when needed.
 
 The final page on the navbar is the add session. This is so the user has quick access to this form at all points while on the site. Here they fill out the simple form that will update the Fit Tracker page with any new sessions the user has added.
 
@@ -22,7 +22,7 @@ All sessions added to the database are also able to be edited and updated with f
 
 Both the sessions and the sports can also be deleted from the database. Both are linked with a modal so that the user will never accidentally delete a session without meaning to. Once the information has been deleted it cannot be retrieved however can be recreated by the user if needed.
 
-Finally, on the sports page the information below each sport counts the number of times that sport is used throughout the action_tracker database which in turn tells the user how many sessions they have planned/completed under each sport.
+Finally, on the sports page the information below each sport describes that sport which is update when the sport is being added to the database.
 
 ### Future features
 
@@ -72,8 +72,6 @@ This site has been pushed to github pages and then conected to heroku to run the
 
 
 
-
-## Credits
 ### Content
 All hard coded content on this site was written by myself.
 ### media
