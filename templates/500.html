@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2 class="white-text"><span class="header">Fit-Pro-Quo</span> Home</h2>
+
+<div class="col s12 m7">
+    <div class="card horizontal blue lighten-3">
+        <h3 class="header">Error</h3>
+        <div class="card-stacked">
+            <div class="card-content">
+                <p class="para">Sorry there has been an error. To continue please use the home link below</p>
+            </div>
+            <div class="card-action">
+                <a href="{{url_for('home')}}" class="waves-effect waves-light btn deep-purple darken-3"><span class="white-text">Home</span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

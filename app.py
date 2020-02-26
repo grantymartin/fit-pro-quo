@@ -78,7 +78,15 @@ def delete_sport(act_id):
     mongo.db.action.remove({'_id':ObjectId(act_id)})
     return redirect(url_for('sports'))
     
+@app.errorhandler(404)
+def pageNotFound(error):
+    return render_template('404.html')
+    
+@app.errorhandler(500)
+def PageNotFound(error):
+    return render_template('500.html')
+    
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
-            debug=True)
+            debug=0)

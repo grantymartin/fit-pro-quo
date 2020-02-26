@@ -34,21 +34,21 @@ I would also like to have a completed feature added so that you can filter down 
 
 ## Technologies Used 
 
-Google Chrome developer tools (https://www.google.com/chrome/)- I used these to test my site on different device sizes and to receive information from javascript in the console.\
+Google Chrome developer tools https://www.google.com/chrome/ I used these to test my site on different device sizes and to receive information from javascript in the console.
 
-Google fronts (https://fonts.google.com/)- Google fonts allowed me to change my text throughout the site to give it a more appropriate style and look for the user.\
+Google fronts https://fonts.google.com/ Google fonts allowed me to change my text throughout the site to give it a more appropriate style and look for the user.
 
-Materialize (https://materializecss.com/)- Materialize was used throughout this site for its grid system and different layout features. It has allowed me to change sizes and add features to my site which has helped give it a more professional look and easier for the user to understand.\
+Materialize https://materializecss.com/ Materialize was used throughout this site for its grid system and different layout features. It has allowed me to change sizes and add features to my site which has helped give it a more professional look and easier for the user to understand.
 
-JQuery (https://jquery.com/)- JQuery has made it easier to target specific aspects of the site in javascript by simplifying the DOM.\
+JQuery https://jquery.com/ JQuery has made it easier to target specific aspects of the site in javascript by simplifying the DOM.
 
-W3C validator (https://validator.w3.org/)- The W3C validator allowed to check my code is clean and had no faults.\
+W3C validator https://validator.w3.org/ The W3C validator allowed to check my code is clean and had no faults.
 
-MongoDB (https://www.mongodb.com)- MongoDB is a database that I'm using to store all the information gained from the site.\
+MongoDB https://www.mongodb.com MongoDB is a database that I'm using to store all the information gained from the site.
 
-Flask (https://www.fullstackpython.com/flask.html)- Flask is a framework that has help make the code easier to write and display.\
+Flask https://www.fullstackpython.com/flask.html Flask is a framework that has help make the code easier to write and display.
 
-Heroku(https://www.heroku.com)- Heroku allows me to create a link with the site running with a working application.\
+Heroku https://www.heroku.com Heroku allows me to create a link with the site running with a working application.
 
 ## Testing
 
@@ -62,7 +62,7 @@ Then I asked them to find diffrent areas of the site to test how easy it was to 
 
 Next I asked them to use the site for it's functionality by having them add a sport and then delete it from the database. Followed by having them add a new session, edit it after already submitting it and then finally deleting it. All were able to easy follow my instructions and the site worked as supposed to. 
 
-Next I asked them to do thier best to break the site in anyway they could. They pointed out to me that when adding or editing sessions you could leave spaces blank and still submit but I felt that to give anyone using this site to create a better plan for themselves, it was better to be able to leave gaps because it might be something they don't know at the time and can come back to.
+Next I asked them to do their best to break the site in anyway they could. They pointed out to me that when adding or editing sessions you could leave spaces blank and still submit but I felt that to give anyone using this site to create a better plan for themselves, it was better to be able to leave gaps because it might be something they don't know at the time and can come back to.
 
 ## Deployment
 
